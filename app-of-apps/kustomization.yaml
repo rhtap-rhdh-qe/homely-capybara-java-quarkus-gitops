@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: homely-capybara-java-quarkus 
+  janus-idp.io/tekton: homely-capybara-java-quarkus
+  backstage.io/kubernetes-id: homely-capybara-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-e2e-ci 
+  app.kubernetes.io/part-of: homely-capybara-java-quarkus
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
